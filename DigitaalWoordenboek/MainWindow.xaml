@@ -1,0 +1,29 @@
+﻿<Window x:Class="DigitaalWoordenboek.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DigitaalWoordenboek"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <StackPanel>
+            <TextBlock Margin="30">Woord</TextBlock>
+            <TextBox Name="tbxInputWoord" Margin="30 0 30 0" MouseEnter="tbxInputWoord_MouseEnter"/>
+            <TextBlock Margin="30">Uitleg</TextBlock>
+            <TextBox Name="tbxInputDefinitie" Margin="30" Height="100" MouseEnter="tbxInputDefinitie_MouseEnter"/>
+            <Viewbox Height="50">
+                <Button Margin="10" Width="250" Click="ButtonVoegWoord_Click">Voeg woord toe aan woordenboek</Button>
+
+            </Viewbox>
+        </StackPanel>
+        <StackPanel Grid.Column="1">
+            <ListBox Name="listbxWoorden" HorizontalContentAlignment="Left" Margin="30" Height="200" SelectionChanged="listbxWoorden_SelectionChanged"/>
+            <TextBox Name="tbxDefinitie" Margin="30" Height="100" TextWrapping="Wrap" IsEnabled="False"></TextBox>
+        </StackPanel>
+    </Grid>
+</Window>
